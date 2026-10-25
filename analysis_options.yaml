@@ -1,0 +1,14 @@
+  import 'package:flutter_test/flutter_test.dart';
+    
+    import 'package:lab_03_lesson_05/main.dart';
+    
+    void main() {
+    testWidgets('Menu shows the three food items', (WidgetTester tester) async {
+    await tester.pumpWidget(const RestaurantMenuApp());
+
+    expect(find.text('Restaurant Menu'), findsOneWidget);
+    expect(find.text('Vegetable Pizza'), findsOneWidget);
+    expect(find.text('Cheese Pizza'), findsOneWidget);
+    expect(find.text('Box of Fries'), findsOneWidget);
+    });
+  }
